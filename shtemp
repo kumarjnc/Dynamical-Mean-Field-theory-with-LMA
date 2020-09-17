@@ -1,0 +1,29 @@
+#
+#HC
+u=5.364865719480
+z=0.013263
+v2=0.6
+dir0=FT
+dir=ZT
+#for f in 0.001 0.002 0.003 0.004 0.005 0.006 0.007 0.008 0.009 0.01
+for f in 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.1 
+do
+cp -f  $dir/Sigup.dat* .
+cp -f  $dir/Sigdn.dat* .
+cp -f $dir/par.dat .
+gunzip -f *.gz
+temp=`bc -l << !
+$z*$v2*$f
+!`
+echo $dir  $temp  $f
+echo $temp $f > inp.datt
+echo $u $z >> inp.datt
+./xpam < inp.datt |tee fort.00 
+dir="$dir0"/"$f"GT
+mkdir $dir
+gzip *.dat fort.*
+gunzip *par*.gz fort.00.gz
+mv -f *.gz *.dat fort.00 $dir
+#exit
+done
+

@@ -1,0 +1,25 @@
+        integer i,j,N,Nm,Npi0,idos
+        parameter(Nm=60000)
+        real*8 t,U,V,ec,ei,x,pi,ferm,eta,dfac,dop
+        real*8 w,w_pi,dw,Ap,omp,asym_p,temp,beta
+	real*8 U0,x0,ei0,n0,mu0,w_m,Zfac,frac,dU,Ufact
+        complex*16 ii,gf,gc0,gfscript,Gfsc_lp,sigma,
+     .	pi0,Pi0_G,gc,zero,ssig,hyb,hyb_G,tpi,gfcpa,gccpa
+	real*8 ep0,ep1,ep2,ep3,ep4,ep5,ep_wm
+	real*8 b1,b2,db2,b4,db4,wm_l,wm_r
+	real*8 b3_n,db3_n,b3_p,db3_p
+	real*8 r1,r2,r3,r4,r5,r6,r8,r10,r11
+	complex*16 z1,z2,z3,z4,z5,z6
+
+	common /ext1/ t,U,V,ec,ei,x,frac,N,Npi0,idos
+	common /ext1a/ U0,x0,ei0,n0,mu0,w_m,Zfac,dfac,dop
+	common /ext2/ w(-Nm:Nm),w_pi(-Nm:Nm),dw(-Nm:Nm),
+     .	ferm(-Nm:Nm),dU,Ufact
+	common /ext3/ gfscript(2,-Nm:Nm),Gfsc_lp(2,-Nm:Nm),
+     .	sigma(2,-Nm:Nm),pi0(-Nm:Nm),Pi0_G(-Nm:Nm),gc0(-Nm:Nm),
+     .	Gf(-Nm:Nm),Gc(-Nm:Nm),ssig(-Nm:Nm),hyb(-Nm:Nm),
+     .	tpi(-Nm:Nm),Gccpa(-Nm:Nm),Gfcpa(-Nm:Nm),hyb_G(-Nm:Nm)
+    	common /ext5/ Ap(2),omp(2),asym_p,temp,beta
+	common /ext6/ ep0,ep1,ep2,ep3,ep4,ep5,ep_wm
+	common /ext7/ b1,b2,db2,b4,db4,wm_l,wm_r
+	common /ext8/ b3_n,db3_n,b3_p,db3_p
