@@ -11,5 +11,7 @@ make
 ```
 
 ### Removed
+```bash
+./xpam < par.dat
+```
 
-- Some packages/libraries from acknowledgements I no longer use
