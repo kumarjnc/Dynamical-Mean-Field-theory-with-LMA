@@ -10,8 +10,9 @@ git clone https://github.com/kumarjnc/DMFT_LMA
 make
 ```
 
-### Removed
+### Run
 ```bash
 ./xpam < par.dat
 ```
-
+### Response funtions
+Green's funtions and self-energy
