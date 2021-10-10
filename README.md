@@ -15,4 +15,4 @@ make
 ./xpam < par.dat
 ```
 ### Response funtions
-Green's funtions and self-energy
+Green's Funtions and Self-energy
