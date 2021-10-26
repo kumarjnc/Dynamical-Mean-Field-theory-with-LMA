@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+ef=2.0
+ec=0.0
+ufc=1.0
+v2=1.0
+nc=1.0
+nf=1.0
+uff=2.0
+m=0.5
+Nm=400
